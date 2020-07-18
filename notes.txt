@@ -1,0 +1,40 @@
+Research problems:
+
+1) What are the root causes that some WeChat’s activities have not been covered by our optimized approach?
+
+2) How can we help developers to more easily identify the steps needed to explore not-covered activities?
+
+
+Contributions:
+
+1) Manual categorization of not-covered activities and coverage analysis (substring hole analysis and ATG analysis) to provide insightful information about not-covered activities.
+
+2) Providing two coverage-analysis techniques for helping developers more easily identify the steps needed to explore not-covered activities.
+
+
+Approach overview:
+
+Authors provided two automatic coverage-analysis techniques to produce insightful information about the not-covered activities: substring hole analysis and activity-transition-graph analysis. 
+
+Substring hole analysis automatically generates the list of keywords most frequent in the names of the not-covered activities. In particular, substring hole analysis splits a string into substrings based on a specified delimiter. Authors split activity names by capitalized characters and counting the occurrences of the keywords.
+
+Activity-transition-graph analysis constructs the activity transition graph (ATG) of the app under test to generate a list of activities that can lead to the not-covered activities. The purpose is to locate the critical bottlenecks of app exploration. Authors define a critical activity as a not-covered activity that is the only predecessor of some other not-covered activities in the activity-transition-graph. Since covering a critical activity could enable the testing tool to likely cover its successor activities, locating the critical activity is crucial to improving the app-exploration strategy and consequently, improving the code coverage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
