@@ -1,0 +1,42 @@
+Paper name: Automated Concolic Testing of Smartphone Apps
+
+Research problem:
+How to alleviate the path-explosion problem in event sequence generating for solving the branch-coverage problem?
+
+
+Key insight：
+If an event sequence seq1 is subsumed by another event sequence seq2, then we can avoid generating sequences that are extensions of seq1, and instead generates extensions of seq2 only.
+
+
+Contributions:
+Checking the subsumption condition between event sequences to prune redundant event sequences, and thereby alleviate path explosion.
+
+
+Approach overview:
+
+1) Generating Single Events：
+By instrumenting Android app and Android SDK, whenever a concrete tap event is input, this instrumentation creates a fresh symbolic tap event and propagates it alongside the concrete event. As the concrete event flows through the SDK and the app, the instrumentation tracks a constraint on the corresponding symbolic event which effectively identifies all concrete events that are handled in the same manner. This not only lets our approach avoid generating spurious events but also enables it to exhaustively generate orthogonal events.
+
+2) Generating Event Sequences:
+By checking simple data- and control-flow facts of each program execution in isolation, the approach does not extend event sequences that end in a read-only event. Pruning such sequences in a particular iteration prevents extensions of those sequences from being considered in future iterations, thereby providing compounded savings, while still ensuring completeness with respect to the AllSeqs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
