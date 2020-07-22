@@ -1,0 +1,34 @@
+Paper name: 
+PATDroid: Permission-Aware GUI Testing of Android
+
+
+Research problem:
+How to identify the minimum number of permission combinations for each of the test cases?
+
+Key insight：
+A given test may not interact with all the permissions requested by an app, meaning that some permissions, regardless of whether they are granted or revoked, may not affect the app’s behavior under a particular test. By excluding the permissions that do not interact with tests, we can achieve a significant reduction in testing effort, yet achieve a comparable coverage and fault detection capability as exhaustive testing.
+
+
+Contributions:
+This is the first approach that considers the dependencies between a program, its test suite, and access control model for the reduction of testing effort
+
+
+Approach overview:
+PATDroid leverages a hybrid program analysis approach to determine the interactions between an app’s GUI tests and its permissions. It first dynamically pinpoints the entry-points of the app exercised by each test case. It then statically examines the parts of code that are reachable from the identified entry points to find the permission-protected code fragments. Afterwards, it statically determines the app inputs (i.e., GUI widgets) that control the execution of permission-protected code fragments. Finally, it statically identifies usages of the app inputs in the test scripts. Employing a sufficiently precise, yet scalable technique, PATDroid is able to effectively determine which tests should be executed under what permission combinations for an app.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
