@@ -1,0 +1,25 @@
+Paper name: 
+Guided, Stochastic Model-Based GUI Testing of Android Apps (FSE'17)
+
+
+Research problem:
+How to generate a model that can achieve high code and model coverage and exhibiting diverse sequences?
+
+
+Key insight (observations)：
+Traditional model based testing techniques choose to generate random tests and use model- level coverage criteria as testing goals. However, without a strong guidance, such tests are often redundant and ineffective to detect bugs. In addition, the previous research only considers UI-level events, and disregards system-level events during testing.
+
+
+Contributions:
+Stoat employs a dynamic analysis technique, enhanced by a weighted UI exploration strategy and static analysis, to effectively explore app behaviors and construct models.
+
+
+Approach overview:
+
+Given an app as input, 
+(1)Model construction. Stoat first constructs a stochastic Finite State Machine (FSM) to describe the app’s behaviors. It uses a dynamic analysis technique, enhanced by a weighted UI exploration strategy, to efficiently explore app behaviors. It infers input events by analyzing the UI hierarchy of app pages, and dynamically prioritizes their executions to maximize code coverage. In addition, to identify some potentially missing events, a static analysis is performed to scan the registered event listeners in the app code. Stoat records the execution frequencies of all UI events during exploration, and later uses them to generate the initial probability values of the transitions in the model.
+(2)Model mutation, test generation, and execution. To thoroughly test an app, Stoat leverages the model from (1) to iteratively guide test generation toward yielding high coverage and exhibiting diverse event sequences. In detail, Stoat works as a loop: randomly mutate the transition probabilities of the current stochastic model, generate the tests from the model w.r.t. the probabilities, randomly inject system-level events (analyzed by static analysis) into these UI-level tests to enhance MBT, replay them on the app and collect test results, such as code and model coverage and event sequence diversities.
+(3)Informed by the test results, Stoat exploits Gibbs sampling to decide whether the newly proposed model should be accepted or rejected, the model with better objective value will be accepted for the next iteration of mutations and samplings; otherwise, it will be rejected with certain probability to avoid local optimal (if rejected, the original model will be reused). Once any bug is detected (i.e., crash or non-responding), further analysis will be performed to diagnose the bug with the corresponding test. 
+
+
+
