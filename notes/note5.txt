@@ -1,0 +1,25 @@
+Paper name: 
+Rousillon: Scraping Distributed Hierarchical Web Data (UIST'16)
+
+
+Research problem:
+How to implement a programming system for writing complex web automation scripts by demonstration and this scripts have the capability to collect hierarchically- structured data from across many different webpages.
+
+
+
+Contributions:
+For the domain of data-access web scraping, the first PBD tool that synthesizes programs with loops and the first PBD tool that collects distributed hierarchical data.
+
+
+Approach overview:
+Given a demonstration of how to collect a row of the joined data, our custom synthesizer produces a scraping program with one loop for each level of the data hierarchy. A Relation Selector algorithm leverages common web design patterns to find relations (e.g., movies, actors, cities, restaurants, reviews). A Generalizer algorithm produces a loop for iterating over each relation. This lets our approach introduce arbitrarily nested loops without user intervention. 
+
+
+
+
+
+
+
+
+
+
