@@ -7,3 +7,5 @@ Paper 3: PATDroid: Permission-Aware GUI Testing of Android (FSE'17)
 paper 4: Guided, Stochastic Model-Based GUI Testing of Android Apps (FSE'17)
 
 paper 5: Rousillon: Scraping Distributed Hierarchical Web Data (UIST'16)
+
+paper 6: SUGILITE: Creating Multimodal Smartphone Automation by Demonstration (CHI'17)

@@ -1,0 +1,25 @@
+Paper name: 
+SUGILITE: Creating Multimodal Smartphone Automation by Demonstration (CHI'17)
+
+
+Research problem:
+By leveraging the verbal instructions, the demonstrated procedures, and the apps’ UI hierarchy structures, how to perform tasks with different variations and parameters from a single demonstration?
+
+
+Contributions:
+A PBD script generalization mechanism that leverages the verbal command, the recorded actions, and recorded information about the UI hierarchy structures of the third-party apps to create a generalized program from a single demonstration 
+
+
+Approach overview:
+(1) After the user finishes the demonstration, SUGILITE first compares the identifying features of the target UI elements and the arguments of the operations against the verbal command, trying to identify the parameters by matching the words in the command.This parameterization method provides users control over the level of personalization and abstraction in SUGILITE scripts.
+(2)In order to support generalization over UI elements, SUGILITE records the set of all possible alternatives to the UI element that the user operates on. SUGILITE finds these alternatives based on the UI structure, looking for those in parallel to the original target UI element. By keeping this list of alternatives, SUGILITE can also differentiate tasks with similar command structure but different values. 
+
+
+
+
+
+
+
+
+
+
