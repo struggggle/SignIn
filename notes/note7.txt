@@ -1,0 +1,27 @@
+Paper name: 
+Monkey See, Monkey Do: Effective Generation of GUI Tests with Inferred Macro Events (ISSTA'16)
+
+
+Research problem:
+How to create complex sequences of events that represent realistic user interactions?
+
+
+Insight:
+Exploiting execution traces of human users to automatically create complex sequences of events that represent logical steps as perceived by a user.
+
+
+Contributions:
+The approach introduces macro events, which summarize sequences of UI events into logical steps that users commonly perform. Then, this paper applies them to generate UI-level tests that trigger complex, realistic sequences of events.
+
+
+Approach overview:
+
+First, the approach gathers execution traces from the interactions of human users with a program. Such traces can be gathered, e.g., during manual pre-deployment testing or via lightweight, distributed sampling of user interactions with a deployed program. 
+Second, the approach identifies recurring patterns in the usage traces and summarizes them into an FSM-based description. Each such pattern, called a macro event, represents one logical step of using the program. 
+Third, the approach automatically generates tests, i.e., sequences of UI events, through a combination of random testing and applying the inferred macro events.
+
+
+
+
+
+

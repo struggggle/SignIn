@@ -9,3 +9,5 @@ paper 4: Guided, Stochastic Model-Based GUI Testing of Android Apps (FSE'17)
 paper 5: Rousillon: Scraping Distributed Hierarchical Web Data (UIST'16)
 
 paper 6: SUGILITE: Creating Multimodal Smartphone Automation by Demonstration (CHI'17)
+
+paper 7: Monkey See, Monkey Do: Effective Generation of GUI Tests with Inferred Macro Events (ISSTA'16)
