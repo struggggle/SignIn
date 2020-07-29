@@ -13,3 +13,6 @@ paper 6: SUGILITE: Creating Multimodal Smartphone Automation by Demonstration (C
 paper 7: Monkey See, Monkey Do: Effective Generation of GUI Tests with Inferred Macro Events (ISSTA'16)
 
 paper 8: DetReduce: Minimizing Android GUI Test Suites for Regression Testing (ICSE'18)
+
+paper 9: Minimizing GUI Event Traces (FSE'16)
+

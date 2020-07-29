@@ -1,0 +1,23 @@
+Paper name: 
+Minimizing GUI Event Traces (FSE'16)
+
+
+Research problem:
+Given a large event trace, how to find a minimal subtrace that reachs the same activity?
+
+
+Insight:
+Identifying and removing some common forms of redundancies introduced by existing automated GUI testing tools.
+
+
+Contributions:
+This paper defines the subtrace selection problem and provide an efficient heuristic, as well as an optimal solution based on the problem’s characterization as a Markov Decision Pro- cess (MDP).
+
+
+Approach overview:
+
+This approach applies delta debugging that starts with a large input sequence that passes a particular test oracle and attempts to remove part of the sequence at every step, such that the remaining subtrace still passes the oracle. This approach is repeated until  have a 1-minimal subtrace that is accepted by the oracle. A 1-minimal subtrace with property P satisfies P, but removing any single element does not satisfy P.
+For the minimization process, this approach checks whether subtraces of a trace still reach the desired state. This approach defines the subtrace selection problem and provide an efficient heuristic, as well as an optimal solution based on the problem’s characterization as a Markov Decision Process (MDP).
+
+
+
