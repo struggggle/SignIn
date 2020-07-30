@@ -1,0 +1,26 @@
+\section{OVERVIEW}\label{sec:overview}
+
+\subsection{Definitions and Problem Statement}
+
+\noindent\textbf{Event.}
+
+\noindent\textbf{Trace.}
+The execution of an app on a sequence of user inputs can be denoted by a trace of the form
+$s_0\xrightarrow{e_1, D_1}s_1\xrightarrow{e_2, D_2}s_2 \cdots\xrightarrow{e_n, D_n}s_n$.
+Each $s_i$ is a concrete state of the Android app.
+Each $D_i$ is an image decoding API invocation sequence. Each image decoding API invocation $d_i$ in $D$ is a pair $(a,b)$, $a$ denotes the image decoding API name, $b$ denotes the returned bitmap object value of the image decoding API invocation.
+Each $s_{i-1}\xrightarrow{e_i, D_i}s_i$ denotes that the Android app transitioned from state $s_{i-1}$ to state $s_i$ on event $e_i$ and induced the sequence of image decoding API invocations $D_i$ during the transition.
+
+\noindent\textbf{Loop.}
+A sub-trace forms a loop if it begins and ends with the same abstract state, computed by abstracting the concrete state of the Android app based on information from the GUI component tree.
+For example, 
+
+
+\noindent\textbf{Problem statement..}
+
+
+
+
+
+
+
