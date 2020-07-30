@@ -16,3 +16,5 @@ paper 8: DetReduce: Minimizing Android GUI Test Suites for Regression Testing (I
 
 paper 9: Minimizing GUI Event Traces (FSE'16)
 
+Towards the Use of the Readily Available Tests from the Release Pipeline as Performance Tests. Are We There Yet? (ICSE'20)
+

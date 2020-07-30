@@ -1,0 +1,19 @@
+Paper name: 
+Towards the Use of the Readily Available Tests from the Release Pipeline as Performance Tests. Are We There Yet? (ICSE'20)
+
+
+Research problem:
+
+Whether the readily available tests from the release pipeline can demonstrate performance improvements obtained from fixing real-life performance issues？
+
+
+Contributions:
+
+Three important findings:
+(1) Most of the performance improvements after an issue fix can be demonstrated by at least one test. However, for each performance issue, only a very small (9.2% and 20.6%) portion of the tests can demonstrate the performance improvements.
+
+(2) There are eight reasons that a test from the release pipeline cannot demonstrate performance improvements from a performance issue fixes. The four main reasons are:
+Too light workload/Limited line coverage of the performance related codes/Partial branch coverage/Frequent access of external resources
+
+(3) Building classifiers to model whether a test can demonstrate the performance improvements of a particular performance issue. By exploring the important factors in the classifiers, the results show that the factors related to the test itself and the covered source code of the test are important in the classifiers.
+
