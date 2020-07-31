@@ -1,0 +1,20 @@
+Paper name: 
+TCM: Test Case Mutation to Improve Crash Detection in Android (FASE'18)
+
+
+Research problem:
+How to mutate existing test cases to produce richer test cases in order to increase the number of detected crashes?
+
+
+Insight:
+Guided by typical crash patterns that exist in Android applications to perform mutation operators on existing test cases.
+
+
+Contributions:
+This paper defines six mutation operators on Android test cases to uncover new crashes.
+
+
+Approach overview:
+
+This paper first identifies typical crash patterns that exist in Android applications. Then, it develops mutation operators based on these crash patterns. 
+Typical crash patterns in Android are Unhandled Exceptions, External Errors, Resource Unavailability, Semantic Errors, and Network-Based Crashes. This paper defines six novel mutation operators (Loop-Stressing, Pause-Resume, Change Text, Toggle Contextual State, Remove Delays, and Faster Swipe) and relate them to these five crash patterns.
