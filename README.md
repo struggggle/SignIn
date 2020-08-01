@@ -19,3 +19,5 @@ paper 9: Minimizing GUI Event Traces (FSE'16)
 paper 10: Towards the Use of the Readily Available Tests from the Release Pipeline as Performance Tests. Are We There Yet? (ICSE'20)
 
 paper 11: TCM: Test Case Mutation to Improve Crash Detection in Android (FASE'18)
+
+paper 12: Crash Reproduction via Test Case Mutation (FSE'15)

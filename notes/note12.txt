@@ -1,0 +1,18 @@
+Paper name: 
+Crash Reproduction via Test Case Mutation (FSE'15)
+
+
+Research problem:
+How to generate a test case to cover a specific program path?
+
+
+Insight:
+Leveraging major structures and objects in existing test cases and increases the chance of executing the specific path.
+
+
+Contributions:
+This paper proposes an automatic crash reproduction approach via test case mutation that generates new test cases by updating existing test cases and keeps object-oriented features in test cases.
+
+
+Approach overview:
+The approach takes the stack trace in the crash, the source code, and existing test cases as input; the output is a set of test cases after mutation that can reproduce the crash. An existing test case denotes a unit test case, which is released together with the program under test and is not able to trigger the crash. The approach consists of three major steps. First, given a stack trace, it executes all the existing test cases on the program and selects test cases that cover the classes in the stack trace. Second, MuCrash eliminates program assertions in these selected test cases and maintains the program behavior inside assertions. Third, given a set of pre-defined mutation operators (e.g., an operator of setting one variable in a method call to null or adding a target method call), each selected test case produces a set of test case mutants. These resulting test cases are executed on the program and the ones that can reproduce crashes are extracted and sent to developers for manually verifying.
