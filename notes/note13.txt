@@ -1,0 +1,23 @@
+Paper name: 
+Practical GUI Testing of Android Applications via Model Abstraction and Refinement (ICSE'19)
+
+
+Research problem:
+How to improve the precision of GUI model for Android apps?
+
+
+Insight:
+Dynamically optimizing GUI model by leveraging the runtime information during testing.
+
+
+Contributions:
+This paper proposes a novel, fully automated, model-based technique that for Android GUI testing. This technique has the ability to dynamically evolve GUI models toward ones that discard all irrelevant GUI details while faithfully reflect the runtime states of the app under test. Also, this paper realizes dynamic model abstraction via a novel type of decision trees, which can expressively represent a wide range of abstractions and thus enables APE to effectively, dynamically refine and coarsen abstractions to balance model precision and size.
+
+
+Approach overview:
+
+(1)At the beginning, a default abstraction is used to initiate the testing process.
+(2)Based on the runtime information observed during testing, APE gradually refines the model by searching for a more suitable abstraction, an abstraction that effectively balances the size and precision of the model. Instead of operating on a fixed abstraction granularity, our approach dynamically adjusts the granularity as needed. Specifically, APE represents the dynamic abstraction with a decision tree, and tunes it on-the-fly with the feedback obtained during testing. This decision tree-based representation of model abstractions greatly improves testing effectiveness.
+
+
+
