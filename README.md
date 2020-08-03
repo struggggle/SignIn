@@ -21,3 +21,9 @@ paper 10: Towards the Use of the Readily Available Tests from the Release Pipeli
 paper 11: TCM: Test Case Mutation to Improve Crash Detection in Android (FASE'18)
 
 paper 12: Crash Reproduction via Test Case Mutation (FSE'15)
+
+paper 13: Practical GUI Testing of Android Applications via Model Abstraction and Refinement (ICSE'19)
+
+paper 14: Efficiently Manifesting Asynchronous Programming Errors in Android Apps (ASE'18)
+
+

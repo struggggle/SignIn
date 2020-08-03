@@ -1,0 +1,40 @@
+Paper name: 
+Efficiently Manifesting Asynchronous Programming Errors in Android Apps (ASE'18)
+
+
+
+Research problem:
+How to automatically and efficiently manifest aysnc programming errors (APEs) ?
+
+
+
+Insight:
+Characterizing APEs as specific fault patterns, and synergistically combine static analysis and dynamic UI exploration to detect and verify such errors.
+
+
+
+Contributions:
+identify three async programming rules implied by the single-GUI-thread model
+Rule 1: Async threads should not update GUI objects
+Rule 2: Async threads should not create GUI components in the background
+Rule 3: Async threads should avoid accessing GUIs or performing transactions inside async callbacks
+
+We develop APEChecker, a technique that synergistically combines static analysis and dynamic UI exploration, to efficiently detect and verify APEs.
+
+
+
+Problem definition:
+Our problem is to check whether there exists any trace t on which u creates an async thread w, and w invokes any UI-accessing method that is not control-dependent on a UI-safe method. If t exists, we find an event sequence l that follows t to exhibit the error under given environment E.
+
+
+
+Approach overview:
+The detection approach in this paper is composed of five key steps: 
+(1) summarizes a set of fault patterns from the collected APE issues;
+(2) encodes these fault patterns into a static analyzer to locate faulty code;
+(3) generates a set of program traces that can reach the faulty code from the app entry;
+(4) maps the program traces into real event sequences (tests) with appropriate environment;
+(5) verifies APEs with the tests, and dumps crash reports for fixing.
+
+
+
