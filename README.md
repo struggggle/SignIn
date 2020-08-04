@@ -26,4 +26,6 @@ paper 13: Practical GUI Testing of Android Applications via Model Abstraction an
 
 paper 14: Efficiently Manifesting Asynchronous Programming Errors in Android Apps (ASE'18)
 
+paper 15: Systematic Execution of Android Test Suites in Adverse Conditions (ISSTA'15)
+
 

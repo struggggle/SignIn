@@ -1,0 +1,18 @@
+Paper name: 
+Systematic Execution of Android Test Suites in Adverse Conditions (ISSTA'15)
+
+
+Research problem:
+How to generate test cases that can test apps under adverse conditions?
+
+
+Insight:
+Injecting special events in existing tests to check the robustness of apps in adverse conditions. 
+
+Contributions:
+A methodology for leveraging existing tests to detect bugs that involve unexpected events.
+
+
+
+Approach overview:
+Given a set of test cases T and a list of neutral event sequences N, we execute each test in T using a modified testing framework that injects every event sequence from N (in the given order) at every injection point. In other words, we combine all the event sequences in N into one neutral event sequence (neutral event sequences are trivially closed under concatenation) and inject it aggressively.
