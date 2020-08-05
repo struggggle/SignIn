@@ -1,0 +1,21 @@
+Paper name: 
+Leveraging Existing Tests in Automated Test Generation for Web Applications (ASE'14)
+
+
+Research problem:
+How to generate new test cases based on existing test cases? 
+
+
+Insight:
+A human-written test suite is a valuable source of domain knowledge, which can be exploited for tackling some of the challenges in automated web application test generation. 
+Manually written test cases typically correspond to the most common happy-paths of the application that are covered. Automated analysis can subsequently expand these to cover unexplored bad-weather application behavior.
+ 
+
+Contributions:
+A novel technique to address limitations of automated test generation techniques by leveraging human knowledge from existing test cases.
+
+
+Approach overview:
+Given the URL of a web application and its human- written test suite, this approach mines the existing test suite to infer a model of the covered DOM states and event-based transitions including input values and assertions. Using the inferred model as input, it explores alternative paths leading to new DOM states, thus expanding the model further. Next it regenerates assertions for the new states, based on the patterns found in the assertions of the existing test suite, and finally generates a new test suite from the extended model, which is a superset of the original human-written test suite. 
+
+

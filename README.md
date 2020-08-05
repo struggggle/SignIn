@@ -28,4 +28,6 @@ paper 14: Efficiently Manifesting Asynchronous Programming Errors in Android App
 
 paper 15: Systematic Execution of Android Test Suites in Adverse Conditions (ISSTA'15)
 
+paper 16: Leveraging Existing Tests in Automated Test Generation for Web Applications (ASE'14)
+
 
