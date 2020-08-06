@@ -30,4 +30,6 @@ paper 15: Systematic Execution of Android Test Suites in Adverse Conditions (ISS
 
 paper 16: Leveraging Existing Tests in Automated Test Generation for Web Applications (ASE'14)
 
+paper 17: Automated Generation of Oracles for Testing User-interaction Features of Mobile Apps (STVR'14)
+
 

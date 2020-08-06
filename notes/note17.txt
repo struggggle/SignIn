@@ -1,0 +1,19 @@
+Paper name: 
+Automated Generation of Oracles for Testing User-interaction Features of Mobile Apps (STVR'14)
+
+
+Research problem:
+How to automatically generate test cases that include test oracles for mobile apps? 
+
+
+
+Insight:
+There is a class of user-interaction features that have no side effects in terms of a test cases, and these features are implicated in a significant fraction of bugs. 
+
+Contributions:
+This paper presents a novel framework for authoring test oracles for checking user-interaction features of mobile applications, in an application agnostic manner.
+
+
+Approach overview:
+The approach organizes an extensible library of reusable and application agnostic feature definitions. Given a user provided GUI model of an app, the approach automatically augments this model with feature instances, using the defined features. Then, based on the cost and test adequacy criteria, it automatically traverses the augmented model to create compact test sequences. Finally, it automatically instantiates test oracles in the test sequences to obtain a compact and complete test suite.
+
