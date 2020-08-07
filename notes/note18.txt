@@ -1,0 +1,23 @@
+Paper name: 
+AIMDROID: Activity-Insulated Multi-level Automated Testing for Android Applications (ICSME'17)
+
+
+Research problem:
+How to automated testing for Android apps that aims to manage the exploration of activities and meantime minimize unnecessary transitions between them?
+
+
+Insight:
+Applying an activity-insulated multi-level strategy during testing and replaying. It systematically discovers unexplored activities and then intensively exploits every discovered individual with a reinforcement learning guided random algorithm.
+
+
+
+Contributions:
+We propose a novel activity-insulated multi-level strategy for model-based automated testing for Android apps.
+
+
+Approach overview:
+AIMDROID models and explores the apps under test (AUT) using a multi-level method. The key insight of AIMDROID is twofold. First, AIMDROID systematically discovers every unexplored activity using a BFS algorithm. Second, AIMDROID insulates a discovered activity in a “cage” and intensively exploits the insulated activity with a reinforcement learning guided fuzzing algorithm. Therefore, we can simplify the search complexity, save restart time and manage the time consumed in each activity.
+
+Specifically, AIMDROID divides the overall testing into episodes. In each episode, AIMDROID generates a bounded number of events and focuses on a single activity by disabling activity transitions. In addition, AIMDROID uses a reinforcement learning algorithm to learn the ability of events that can discover new activities. AIMDROID can “looks ahead” and select events that are more likely to trigger new activities and crashes in a greedy manner.
+To further save restart time, AIMDROID can start an explored activity for another episode without restarting from scratch. In the normal usage, we need a proper event sequences to reach an activity. Actually, some internal activities can be started directly by providing a proper intent [21] only. To this end, we record the intent when starting an activity. Then, we try to start the activity directly first during the remaining test using the saved intents and then restart from the scratch if the intent fails. This method is also used during replaying. Thus, AIMDROID can also provide a short event sequence for replaying.
+
