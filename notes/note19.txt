@@ -1,0 +1,28 @@
+Paper name: 
+Crowd Intelligence Enhances Automated Mobile Testing (ASE'17)
+
+
+Research problem:
+How to achieve higher code coverage during Android testing?
+
+
+Insight:
+Information extracted from crowd-based testing can enhance automated mobile testing.
+
+
+
+Contributions:
+The scientific evidence that motifs extracted from crowdsourced tests can complement and extend state-of-the-art automated test generation.
+
+
+
+Approach overview:
+
+We use a genetic algorithm to extract crowd motif events for mobile testing.
+The algorithm extracts multiple motif patterns from a set of collected log-trace pairs. 
+In order to learn from ‘the wisdom of the crowd’, the algorithm extracts the minimum trace that enables a transition from one activity to another. 
+Then, it uses a genetic algorithm to find multiple motif patterns. At each iteration, the algorithm finds a single motif pattern and excludes the matched motif substrings. Each individual genetic algorithm population member represents a candidate motif pattern; The individual’s fitness is evaluated based on the information content score.
+
+The variation operator applies both crossover and mutation to manipulate the location and length of each motif substring. The best individuals (with highest information content score, i.e., their motif substrings are most conservative) are selected for the next generation. In this way our genetic algorithm uses elitism in its selection and retention. Evolution stops after a given maximum number of generations, saving the best individual found. The overall process repeats until all m motif patterns have been discovered.
+
+

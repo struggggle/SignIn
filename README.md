@@ -33,3 +33,5 @@ paper 16: Leveraging Existing Tests in Automated Test Generation for Web Applica
 paper 17: Automated Generation of Oracles for Testing User-interaction Features of Mobile Apps (STVR'14)
 
 paper 18: AIMDROID: Activity-Insulated Multi-level Automated Testing for Android Applications (ICSME'17)
+
+paper 19: Crowd Intelligence Enhances Automated Mobile Testing (ASE'17)
