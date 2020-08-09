@@ -35,3 +35,5 @@ paper 17: Automated Generation of Oracles for Testing User-interaction Features 
 paper 18: AIMDROID: Activity-Insulated Multi-level Automated Testing for Android Applications (ICSME'17)
 
 paper 19: Crowd Intelligence Enhances Automated Mobile Testing (ASE'17)
+
+paper 20: Finding Resume and Restart Errors in Android Applications (OOPSLA'16)

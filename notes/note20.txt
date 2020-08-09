@@ -1,0 +1,43 @@
+Paper name: 
+Finding Resume and Restart Errors in Android Applications (OOPSLA'16)
+
+
+Research problem:
+Smartphone apps create and handle a large variety of “instance” data that has to persist across runs. If the instance data is not saved and restored between runs, in addition to data loss, partially-saved or corrupted data can crash the app upon resume or restart. How to detect this kind of bugs? 
+
+
+Contributions:
+1. Revealing and defining KR errors, a new class of errors germane to smartphone apps.
+2. A definition of KR data, i.e., data that should be saved and restored across resume-and-restart cycles.
+3. KREfinder, a static analysis for identifying KR data and incorrect handling thereof.
+4. KREreproducer, an input generator to facilitate reproducing errors.
+
+
+Approach overview:
+
+The approach consists of two main components, KREfinder and KREreproducer. Given an Android app (APK file) as input, KREfinder performs a suite of static analyses (data and control flow) to find potential KR errors, and report their location and KR error path as a summary. The summaries are in a format suitable for KREreproducer, that automatically generates a sequence of directed transitions (input event sequences) that land the app in the potential-error state. At this point, the app can be paused-and-resumed (or killed-and- restarted, respectively) so the error can be confirmed. 
+
+The analyses consist of several phases:
+1. Identify KR data.
+KR data is a subset of fields in the application-defined classes.
+
+2. Find changes (writes) to KR data, saves/restore operations, and exits.
+With the KR data fields at hand, the approach proceed to finding if, and how they change. The approach defines data changes as assignment statements where a KR field (or alias thereof) is written to. 
+
+The approach identifies data saves and restores as those call instructions to certain An- droid API methods that save data to persistent storage and restore data from persistent storage, respectively. 
+
+For finding Exits, the exit of an Android app or activity is different from that of a desktop application since Android apps are event-driven and do not have a main() method. We have identified three types of exit statements.
+First, the end of onDestroy() method—this is the most common exit. 
+Second, a java.lang.System.exit () call; this call terminates the currently- running Java Virtual Machine. Third, the end of onStop(). This method is called when the activity is no longer visible to the user (going from foreground to the background), because another activity is resuming, hence forcing the cur- rent foreground activity into the background.
+
+
+3. Constructing the data flow from KR changes to KR saves and identify potential errors and constructing the control flow from KR changes to exits and identify potential errors.
+Four types of errors:
+Type 1. A KR field has only one save operation that is placed in methods that are not guaranteed to be called by the AF, hence the KR field value might be lost.
+Type 2. A KR field has at least one save operation, but there exists a path from a data change instruction to an activity or app exit AND the path does not contain any save operation for the data; hence the KR field value might be lost. 
+Type 3. A KR field has no save and restore operations. 
+Type 4. The loss occurs when a KR field does not have a save operation, but has a restore operation, e.g., when the developer forgot to invoke a save method. 
+
+
+4. Generate directed transitions (input sequences) for reproducing and verifying the errors
+The approach uses a suite of static analyses (provided by other tools) to construct directed transitions, i.e., sequences of GUI events and method callbacks that must be invoked to drive the execution to the error location. Once the app is in the error location, we can go through pause-and-resume (or kill-and-restart) cycles to confirm the error. This suite relies mostly on third-party tools, so we de- scribe it in the implementation part
