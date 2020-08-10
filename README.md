@@ -37,3 +37,5 @@ paper 18: AIMDROID: Activity-Insulated Multi-level Automated Testing for Android
 paper 19: Crowd Intelligence Enhances Automated Mobile Testing (ASE'17)
 
 paper 20: Finding Resume and Restart Errors in Android Applications (OOPSLA'16)
+
+paper 21: Automated Model-Based Android GUI Testing using Multi-level GUI Comparison Criteria (ASE'16)

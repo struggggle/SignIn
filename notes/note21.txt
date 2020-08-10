@@ -1,0 +1,19 @@
+Paper name: 
+Automated Model-Based Android GUI Testing using Multi-level GUI Comparison Criteria (ASE'16)
+
+
+Research problem:
+How to generate accurate GUI modeling of an AUT to generate effective test inputs? 
+
+
+
+Contributions:
+Proposing a set of multi-level GUI Comparison Criteria (GUICC) that provides the selection of multiple abstraction levels for GUI model generation.
+
+
+
+Approach overview:
+
+This paper focuses on the GUI model generation technique, especially on the GUI comparison criteria for model generation. This paper (1) defines a Multi-Level GUI Comparison Criteria (Multi-Level GUICC) by suggesting a set of abstraction levels for automated model- based Android GUI testing; (2) develops an automated model-based GUI testing framework to actually perform automated GUI testing for real-world Android apps.
+
+This approach receives two inputs: (1) an installation file (.apk file) on the Android side, and (2) a selected level of GUICC (Max C-Lv) to configure the abstraction level of a GUI graph. After the testing engine sets a target AUT, it starts a reverse-engineering process from a black-box view to generate a GUI graph of the target app without source code. During the model generation process, the engine automatically explores the behavior space of an AUT by executing events sequentially on the Android device—this process is generally called online test input generation.
