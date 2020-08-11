@@ -1,0 +1,24 @@
+Paper name: 
+EHBDroid: Beyond GUI Testing for Android Applications (ASE'17)
+
+
+Research problem:
+How to solve the problem that most existing UI-based approaches are either too slow to generate events, or cannot effectively generate certain events?
+
+
+Insight:
+In event-driven systems, there often exists a correspondence between an event and an event handler. The events that occur on the UI are eventually passed to and are handled by their event handlers. Hence, instead of attempting to generate UI events, we can trigger their event handlers (callbacks) directly. 
+
+
+Contributions:
+We develop an event handler-based testing approach, EHBDroid, for testing Android apps without the need to generate events. EHBDroid directly invokes the event handlers, it avoids the difficulty of generating complex events that are hard to trigger by traditional UI-based approaches, and it avoids the latency induced by the GUI and the cost of message passing in the system.
+
+
+Approach overview:
+
+We first identify all event registration statements in the app based on the three patterns.
+Then, for each event registration statement, we construct an instrumented invocation statement (which will be inserted into the app), according to the invocation pattern of event handlers.
+Then, for constructing valid arguments for these callback invocations, we propose a simple yet effective method to construct valid arguments based on the default values and from the app context. 
+Finally, our testing focuses on covering all events in an app. To this end, all activities where events can be triggered should be visited.
+EHBDroid begins from the main activity, it first identifies the event handlers (callbacks) of events in main activity. Then, it invokes all these callbacks in a random but valid order CS. That is, each callback can only be invoked if the corresponding event is valid at the current state of main activity; if there is more than one valid event, the invocation order of these callbacks is random. 
+Notably, the invocation of some event handlers in CS may cause the transitions from main activity to other activities. These activities are automatically pushed into the Android activity stack. After all event handlers in main activity are invoked, the other activities Ai at the top of the stack is popped. The same strategy is used to explore all event handlers in Ai. The above procedure iterates until all activities of the app are explored.
