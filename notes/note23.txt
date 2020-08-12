@@ -1,0 +1,33 @@
+Paper name: 
+Data Loss Detector: Automatically Revealing Data Loss Bugs in Android Apps (ISSTA'20)
+
+
+Research problem:
+How to generate test cases that can exercise and reveal data loss faults?
+
+
+Contributions:
+It describes an exploration strategy, data-loss-revealing actions, and two state-based oracles that can be incorporated in testing techniques to reveal data loss problems.
+
+
+Approach overview:
+We present Data Loss Detector (DLD), an automatic testing technique that can reveal data loss problems in Android apps. DLD integrates three capabilities to effectively reveal data loss problems: 
+(i) a biased model-based exploration strategy that steers the exploration towards (new) app states that may be affected by data loss problems, 
+(ii) data-loss-revealing actions that increase the likelihood to expose data loss problems, 
+(iii) two state-based oracles, a snapshot-based oracle and a property-based oracle, that have a high data loss detection accuracy, especially if used jointly.
+
+
+(1) Biased Model-Based Exploration
+The test case generation strategy implemented in DLD consists in visiting as many states as possible and incrementally testing the newly discovered states to detect data loss faults. To this end, the strategy builds a GUI model that represents the visited states and the executed actions. The model serves two main purposes: to distinguish the already visited (and tested) states from the new ones, and to bias the exploration towards the execution of actions that may potentially lead to states never visited before.
+DLD uses an abstraction that ignores the concrete values, but still discriminates the relevant distinct states associated with a same Android activity. 
+
+(2) Data-Loss-Revealing Actions
+The exploration activity is combined with the execution of data-loss-revealing actions that have the objective to reveal data loss problems.
+DLD includes two data-loss-revealing actions: one is executed systematically every time a new abstract state is reached (systematic data-loss-revealing action), while the other is executed probabilistically at every abstract state (probabilistic data-loss-revealing action).
+
+(3) Data Loss Oracles
+DLD uses oracles based on the fact that the operations that exercise the data loss faults are expected to be neutral, thus leaving the status of the app unchanged.
+The basic DLD strategy is to collect the GUI state of the app before and after the execution of actions that may have triggered a data loss failure and compare the states to detect it.
+DLD defines two oracle strategies, which can be used either in-dependently or jointly: the snapshot-based oracle and the property-based oracle. 
+The snapshot-based oracle takes a screenshot of the app before and after a data loss might have occurred and compares the images to detect failures. 
+The property-based oracle analyzes the GUI state and collects all the views and all their properties, and compares these two sets of properties to detect failures.
