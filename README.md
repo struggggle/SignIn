@@ -43,3 +43,8 @@ paper 21: Automated Model-Based Android GUI Testing using Multi-level GUI Compar
 paper 22: EHBDroid: Beyond GUI Testing for Android Applications (ASE'17)
 
 paper 23: Data Loss Detector: Automatically Revealing Data Loss Bugs in Android Apps (ISSTA'20)
+
+paper 24: Reducing combinatorics in GUI testing of android applications (ICSE'16)
+
+
+
