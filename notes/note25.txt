@@ -1,0 +1,19 @@
+Paper name: 
+Automated Testing with Targeted Event Sequence Generation (ISSTA'16)
+
+
+Research problem:
+Given an Android application under test, a UI model of the application, and a set of targets, how to generate a test case for each target, that is, an event sequence that brings the application from its initial state to the target.
+
+
+Contributions:
+We present a framework that combines concolic execution and UI models for targeted generation of test inputs to reach application code that may require many events and with highly constrained event parameters.
+
+
+Approach overview:
+We propose a two-phase technique for automatically finding event sequences that reach a given target line in the application code. The first phase performs concolic execution to build summaries of the individual event handlers of the application. The second phase builds event sequences backward from the target, using the summaries together with a UI model of the application.
+
+The our approach to targeted event sequence generation works in two phases:
+1) We first preprocess the application by performing concolic execution of each event handler to infer path conditions and symbolic states for its paths. The result is a summary for each event handler, reminiscent of the use of function summaries in compositional symbolic execution. This phase is independent of the selected target.
+2) Given a target location in the application code, the main phase uses the event handler summaries together with a UI model of the application to build a concrete event sequence that leads from the entry state of the application to the target. This is structured as a worklist algorithm where each worklist item consists of a path through one or more event handlers ending at the target. Each path is extended incrementally by searching for an event handler that may be triggered in front of the path to satisfy some of the constraints in the path condition. This search uses the UI model and the symbolic states to bypass event handlers that are likely not relevant for the path condition. When candidate event sequences are found, we compose the path summaries and check satisfiability. This process continues until the entry state of the UI model is reached.
+

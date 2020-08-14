@@ -46,5 +46,7 @@ paper 23: Data Loss Detector: Automatically Revealing Data Loss Bugs in Android 
 
 paper 24: Reducing combinatorics in GUI testing of android applications (ICSE'16)
 
+paper 25: Automated Testing with Targeted Event Sequence Generation (ISSTA'16)
+
 
 
