@@ -48,5 +48,7 @@ paper 24: Reducing combinatorics in GUI testing of android applications (ICSE'16
 
 paper 25: Automated Testing with Targeted Event Sequence Generation (ISSTA'16)
 
+paper 26: PUMA: Programmable UI-Automation for Large-Scale Dynamic Analysis of Mobile Apps (MobiSys‘14)
+
 
 
