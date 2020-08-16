@@ -1,0 +1,14 @@
+Paper name: 
+paper 27: QBE: qlearning-based exploration of Android applications (ICST'18)
+
+
+Research problem:
+How to increase activity coverage for Android testing?
+
+
+Contributions:
+We propose QLearning-Based Exploration (QBE), a fully automated black-box testing methodology that explores GUI actions using a well-known reinforcement learning tech- nique in machine learning.
+
+
+Approach overview:
+We implement QBE on top of AndroFrame. In the training phase of QBE, first, we obtain models of Android applications from a training set by executing them with Random Exploration (RE) strategy. Then, using all these models we obtain a single Q-Matrix with respect to an objective. In the testing phase of QBE, we test a given Application Under Test (AUT) by sampling actions from the distribution implied by the Q-Matrix instead of randomly choosing from the set of all enabled actions.
