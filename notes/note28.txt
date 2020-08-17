@@ -1,0 +1,17 @@
+Paper name: 
+Automatically Discovering, Reporting and Reproducing Android Application Crashes (ICST'16)
+
+
+Research problem:
+How to automatically discovers, reports, and reproduces crashes for Android applications?
+
+
+Contributions:
+To the best of the author’s knowledge, this is the first approach that is able to generate expressive, detailed crash reports for mobile apps, including screenshots and augmented NL reproduction steps, in a completely automatic fashion.
+
+
+Approach overview:
+The first step is to obtain the source code of the app, either directly or through decompilation, and detect Activities (by means of static analysis) that are related to contextual features in order to target the testing of such features. In other words, CRASHSCOPE will only test certain contextual app features (e.g., wifi off) if it finds instances where they are implemented in the source code.
+Next, the GUI Ripping Engine systematically executes the app using various strategies, including enabling and disabling the contextual features (if run on an emulator) at the Activities of the app identified previously. If during the execution, uncaught exceptions are thrown, or the app crashes, dynamic execution information is saved to the CRASH-SCOPE’s database, including detailed information regarding each event performed during the systematic exploration. 
+After the execution data has been saved to the CRASH-SCOPE database, the Natural Language Report Generator parses the database and processes the information for each step of all executions that ended in a crash, generating an HTML based natural language crash report with expressive steps for reproduction. In addition, the Crash Script Generator parses the database and extracts the relevant information for each step in a crashing execution in order to create a replayable script containing adb input commands and markers for contextual state changes. 
+The Script Replayer is able to replay these scripts by executing the sequence of adb input commands and interpreting the contextual state change signals, in order to reproduce the crash. In the case of the 31C3 Schedule app, this involves turning off the network connection and trying to interact with one of the app menu headers.

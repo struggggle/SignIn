@@ -52,5 +52,7 @@ paper 26: PUMA: Programmable UI-Automation for Large-Scale Dynamic Analysis of M
 
 paper 27: QBE: qlearning-based exploration of Android applications (ICST'18)
 
+paper 28: Automatically Discovering, Reporting and Reproducing Android Application Crashes (ICST'16)
+
 
 
