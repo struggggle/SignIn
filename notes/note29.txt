@@ -1,0 +1,31 @@
+Paper name: 
+A Grey-box Approach for Automated GUI-Model Generation of Mobile Applications （FASE'13）
+
+
+Research problem:
+Given a mobile app, efficiently generate a high-quality model representing the valid input event sequences accepted by the app, where quality is measured by the following criteria:
+1. Coverage. Every reachable program statement of the app should be executed by running at least one of the event sequences included in the model.
+2. Precision. The model should not include invalid events, i.e., events that are not supported by widgets on a given screen.
+3. Compactness. The size of the model, in relation to the number of event sequences that it represents, should be as small as possible.
+
+
+Contributions:
+A dynamic, grey-box GUI reverse-engineering approach for mobile apps.
+A novel static analysis to support the dynamic GUI crawling.
+
+
+Approach overview:
+We propose a grey-box approach for automatically extracting a model of a given mobile app. First, we use static analysis of the app’s source code to extract the set of user actions supported by each widget in the GUI. Next, a dynamic crawler is used to reverse-engineer a model of the app, by systematically exercising extracted actions on the live app. 
+
+For the first step:
+simply firing all possible actions on each widget would bring in invalid actions into the model and lower its precision. Thus, knowledge of the precise set of GUI actions is essential to generating a high-quality model. Our approach uses static analysis to infer these actions. We make the observation that in the Android framework a user action is defined by either (a) registering an appropriate event listener for it or, (b) by inheriting the event- handling method of an Android-framework component. We term the former as registered action and the latter inherited action. For both these categories, identifying an action involves three basic steps: (1) identify the place where an action is instantiated or registered; (2) locate the component on which the action would be fired; (3) extract an identifier of the component that the crawler can later use to recognize the corresponding object and fire the action.
+
+For the second step:
+The objective is to exhaustively explore all the app’s states by firing open actions, i.e., actions that have previously not been exercised by the crawler, on each observed state. The crawling process ends if the model has no open states, i.e., states that have open actions to be fired.
+The key challenge here is the backtracking step, i.e., undoing the most recent action done by DFS, on reaching a previously seen state.
+Our crawler uses a modified depth-first search, which tries to crawl only “forward” as much as possible using the Back button to backtrack when needed.
+
+
+
+
+

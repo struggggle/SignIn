@@ -54,5 +54,7 @@ paper 27: QBE: qlearning-based exploration of Android applications (ICST'18)
 
 paper 28: Automatically Discovering, Reporting and Reproducing Android Application Crashes (ICST'16)
 
+paper 29: A Grey-box Approach for Automated GUI-Model Generation of Mobile Applications (FASE'13)
+
 
 

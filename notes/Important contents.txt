@@ -1,0 +1,22 @@
+Content 1:
+Paper: A Grey-box Approach for Automated GUI-Model Generation of Mobile Applications
+
+（1）mobile app具有的特征
+The characteristics of Android apps that make them suitable for specific automated testing techniques.
+– Small size. Mobile apps are typically much smaller and simpler than desk-
+top applications, both in terms of the physical footprint as well as behavior. Desktop applications can be large, feature-rich, and computationally intensive. However, a significant fraction of mobile apps are designed as “micro-apps” to solve small and specific tasks [14]. Furthermore, the size of mobile apps is con- strained by the limited processing, storage, and display resources of the mobile device. The small size of mobile apps enables automatic testing techniques to be feasible and applicable to real-world apps.
+– Event-centric. Mobile devices have evolved to be small-screen devices with- out a keyboard. Since typing is onerous on such devices, mobile apps are designed around a rich set of user gestures as input events. Thus, on the one hand, the role of typed data is somewhat diminished in mobile apps in contrast to desktop applications. On the other hand, the richer set of user gestures in mobile apps needs to be incorporated into any testing process.
+– Simple & Intuitive GUI. Users of desktop GUI applications might be ex- pected to refer to documentation or tutorials to fully comprehend how to use the applications. In contrast, mobile apps are expected to have a simple and intuitive user interface where most, if not all, usage scenarios of an app should be evident to average users, from the GUI.
+
+（2）如何进行问题定义
+Problem Definition. Given a mobile app, efficiently generate a high-quality model representing the valid input event sequences accepted by the app, where quality is measured by the following criteria:
+1. Coverage. Every reachable program statement of the app should be executed by running at least one of the event sequences included in the model.
+2. Precision. The model should not include invalid events, i.e., events that are not supported by widgets on a given screen.
+3. Compactness. The size of the model, in relation to the number of event sequences that it represents, should be as small as possible.
+
+（3）关于Back Button
+Mobile platforms, such as Android, provide a Back button to undo actions. But this button is designed for app navigation and is context-sensitive. Thus, it is not a reliable mechanism for backtracking to precisely the previous state. 
+
+
+
+
