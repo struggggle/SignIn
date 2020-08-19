@@ -1,0 +1,23 @@
+Paper name: 
+Synthesizing Highly Expressive SQL Queries from Input-Output Examples (pldi'17)
+
+
+Research problem:
+How to synthesize SQL queries from input-output (I/O) examples?
+
+
+Insight:
+Our key insight for the challenges is to design a language of abstract queries to break down the synthesis process. Abstract queries resemble SQL queries except that they can contain uninstantiated filter predicates in the form of holes. This language lets us decompose the original synthesis problem into the following two subproblems that can be efficiently solved:
+1. Synthesizing all abstract queries that can potentially be instantiated into queries satisfying the given I/O examples and pruning away the rest.
+2. Searching for predicates to fill holes in these abstract queries, instantiating them into concrete ones, and deter- mining which ones are consistent with the I/O examples.
+
+
+Contributions:
+The development of a language for abstract queries that can express a large space of SQL queries efficiently.
+
+
+Approach overview:
+we decompose the SQL synthesis problem into two phases. In the first phase, we search for abstract queries that can potentially be instantiated into SQL queries that satisfy the given I/O examples, and we prune away others based on their evaluation result. Then, in the second phase, we search for proper predicates for each synthesized abstract query to instantiate it into desired SQL queries and return top candidates to the user. To make the predicate search process efficient, we cluster predicates into semantically equivalence classes and encode tables using bit-vectors.
+
+
+
