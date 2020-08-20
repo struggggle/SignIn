@@ -1,0 +1,21 @@
+Paper name: 
+FrAngel: Component-Based Synthesis with Control Structures (POPL'19)
+
+
+Research problem:
+How to synthesize short Java functions with control structures when given a desired signature, a set of input-output examples, and a collection of libraries (without formal specifications)?
+
+
+Insight:
+Progress in a synthesis search is primarily made by finding programs with distinct meaningful behaviors (i.e., program semantics). 
+
+Contributions:
+We present a method to mine code fragments that are likely to be useful for a given task. We also discuss the special-case similarity property of programs, and argue why this property leads to the effective mining of fragments.
+We describe angelic conditions, which factorize the synthesis process. Programs with angelic conditions are evaluated optimistically with angelic execution.
+
+
+Approach overview:
+FrAngel aims to discover programs with many distinct behaviors by combining two main ideas. First, it mines code fragments from partially-successful programs that only pass some of the examples. These extracted fragments are often useful for synthesis due to a property that we call special-case similarity. Second, FrAngel uses angelic conditions as placeholders for control structure conditions and optimistically evaluates the resulting program sketches. Angelic conditions decompose the synthesis process: FrAngel first finds promising partial programs and later fills in their missing conditions.
+
+
+

@@ -56,7 +56,9 @@ paper 28: Automatically Discovering, Reporting and Reproducing Android Applicati
 
 paper 29: A Grey-box Approach for Automated GUI-Model Generation of Mobile Applications (FASE'13)
 
-paper 30: Synthesizing Highly Expressive SQL Queries from Input-Output Examples (pldi'17) （It's not finished yet）
+paper 30: Synthesizing Highly Expressive SQL Queries from Input-Output Examples (pldi'17) （It is not finished yet）
+
+paper 31: FrAngel: Component-Based Synthesis with Control Structures (POPL'19) （It is not finished yet）
 
 
 
