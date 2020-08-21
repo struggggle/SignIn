@@ -1,0 +1,17 @@
+Paper name: 
+Test-Driven Synthesis (PLDI'14)
+
+
+Research problem:
+How to synthesize short Java functions with control structures when given a desired signature, a set of input-output examples, and a collection of libraries (without formal specifications)?
+
+
+Contributions:
+Our novel test-driven synthesis methodology for solving such synthesis problems combines iterative synthesis and DSL-based synthesis to be able to synthesize programs with non- trivial control flow including conditionals, loops, and recursion in an arbitrary DSL.
+
+
+Approach overview:
+As it is part of an iterative synthesis procedure, DBS is given a previous program that satisfies some prefix of the examples and searches for a modification that makes it satisfy all of the examples. These modifications replace some subexpression of the previous program with a new expression. The generation of replacement subexpressions is done by component-based synthesis: DBS considers the semantically distinct expressions of the DSL, build- ing them up starting with the atoms in the DSL and the previous program’s subexpressions. In our DSL-based approach, DBS uses the grammar of the DSL as opposed to just the types of the expressions to decide what expressions to build, which significantly narrows the search space.
+
+
+
