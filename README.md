@@ -64,5 +64,7 @@ paper 32: Test-Driven Synthesis (PLDI'14) (It is not finished yet）
 
 paper 33: Synthesizing Programs That Expose Performance Bottlenecks (CGO'18)
 
+paper 34: Efficiently, Effectively Detecting Mobile App Bugs with AppDoctor (EuroSys'14)
+
 
 

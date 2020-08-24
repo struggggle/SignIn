@@ -1,0 +1,17 @@
+Paper name: 
+Efficiently, Effectively Detecting Mobile App Bugs with AppDoctor
+
+
+Research problem:
+How to efficiently and effectively test apps against many system and user actions?
+
+
+Insight:
+First, it uses approximate execution to greatly speed up testing and reduce diagnosis effort. 
+
+
+Approach overview:
+
+First, it uses approximate execution to greatly speed up testing and reduce diagnosis effort. Specifically, it quickly screens for potential bugs by performing actions in approximate mode—which run much faster than actions in faithful mode and can ex- pose bugs but allow false positives (FPs). For example, instead of waiting for more than two seconds to inject a long-click action on a GUI widget, AppDoctor simply invokes the widget’s long-click event handler. Invoking the handler is much faster but allows FPs because the handler may not be invoked at all even if a user long-clicks on the widget— the app’s GUI event dispatch logic may ignore the event or send the event to other widgets. Given a set of bug reports detected through approximate executions, AppDoctor reduces the FPs caused by approximation as follows. Based on the traces of actions in bug reports, AppDoctor automatically validates most bugs by generating test cases of low-level events such as key presses and screen touches (e.g., a real long click). These test cases can be used by developers to reproduce the bugs independently without AppDoctor. Moreover, AppDoctor automatically prunes most FPs with a new algorithm that selectively switches between approximate and faithful executions.
+Second, AppDoctor uses action slicing to speed up reproducing and diagnosing app bugs. The trace leading to a bug often contains many actions. A long test case makes it slow to reproduce a bug and isolate the cause. Fortunately, many actions in the trace are not relevant to the bug, and can be sliced out from the trace. However, doing so either requires precise action dependencies or is slow. To solve this problem, AppDoctor again embraces approximation, and employs a novel algorithm and action dependency definition to effectively slice out many unnecessary actions with high speed.
+
