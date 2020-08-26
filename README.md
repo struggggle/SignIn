@@ -66,5 +66,7 @@ paper 33: Synthesizing Programs That Expose Performance Bottlenecks (CGO'18)
 
 paper 34: Efficiently, Effectively Detecting Mobile App Bugs with AppDoctor (EuroSys'14)
 
+paper 35: Caiipa: Automated Large-scale Mobile App Testing through Contextual Fuzzing (MobiCom’14)
+
 
 

@@ -1,0 +1,9 @@
+Paper name: 
+Caiipa: Automated Large-scale Mobile App Testing through Contextual Fuzzing
+
+Research problem:
+How to test apps over an expanded mobile context space?
+
+Approach overview:
+
+we propose a new approach to mobile app testing named contextual fuzzing. This technique incorporates two key advances over existing alternative methods such as simulators that simply round-robin over a limited sets of common conditions. First, apps are exposed to a large-scale library of diverse contexts synthesized from the actual conditions observed in the wild. Thousands of contexts are considered; for example, the throughput and loss rates observed for Wi-Fi and 3G networks around the world – rather than only testing expected network behavior as quoted on technical specifications. Second, because of the wide-range of potential contexts to which an app can be exposed, a custom app-specific priority order of contexts is determined. Conditions expected to be highly relevant to the tested app are applied first in favor of less relevant ones; for example, an app might be sensitive to poor network connectivity or low memory conditions and so this category of contexts will be prioritized over CPU- or GPS-oriented tests. These two core techniques combine to enable contextual fuzzing to highlight potential problems before an app is even released to the public.
