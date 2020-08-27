@@ -1,0 +1,23 @@
+Paper name: 
+Using Frugal User Feedback with Closeness Analysis on Code to Improve IR-Based Traceability Recovery
+
+
+
+Research problem:
+How to improve IR-based traceability recovery based on a small amount of user feedback?
+
+
+Insight:
+when the user is verifying the IR candidate lists, if one or more classes from a candidate region are verified as relevant to a given requirement, other classes in the region are also likely to be traced to the same requirement.
+
+Contribution:
+Combining closeness analysis on call and data dependencies with user feedback to improve IR-based requirements-to-code traceability recovery.
+
+
+Approach overview:
+our approach first uses IR techniques to generate ranked lists of candidate links between requirements and classes in code. Our approach then improves the ranking of the candidate list for each requirement in two steps: (1) it locates a small set of candidate regions and ask users to verify whether one or more classes that have high IR values in the region are relevant to the given requirement; (2) based on each verification result (relevant or irrelevant), our approach then either promote or demote the unverified links in which the classes have a composed high closeness measures to the class in the verified link. Eventually, the ranking of candidate lists is improved according to the composition of IR value, user feedback, and closeness measure. 
+
+The approach consists of three steps:
+First, we build a Code Dependency with Closeness Graph (CDCGraph) based on captured code dependencies with their calculated closeness measures. 
+Second, we use IR techniques to generate candidate links between requirements and classes.
+Third, we build candidate regions in the CDCGraph and ask users to iteratively verify a small number of representative classes in each region for a given requirement, until the users exit the verification process; the ranking of IR candidate lists will be adjusted according to the verified links.

@@ -68,5 +68,7 @@ paper 34: Efficiently, Effectively Detecting Mobile App Bugs with AppDoctor (Eur
 
 paper 35: Caiipa: Automated Large-scale Mobile App Testing through Contextual Fuzzing (MobiCom’14)
 
+paper 36: Using Frugal User Feedback with Closeness Analysis on Code to Improve IR-Based Traceability Recovery (ICPC'19)
+
 
 
