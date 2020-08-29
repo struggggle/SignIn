@@ -1,0 +1,17 @@
+Paper name: 
+A Guided Genetic Algorithm for Automated Crash Reproduction (ICSE'17)
+
+
+Research problem:
+How to reproduce real-world crashes?
+
+
+Contributions:
+A novel guided genetic algorithm (GGA) for crash reproduction that generates and evolves only tests that exercise at least one of the methods involved in the failure;
+
+Insight:
+It lets the stack trace guide the search, thus reducing the search space.
+
+
+Approach overview:
+GGA contains all main steps of a standard genetic algorithm: (i) it starts with creation of an initial population of random tests; (ii) it evolves such tests over subsequent generations using crossover and mutation; and (iii) at each generation it selects the fittest tests according to the fitness function. The main difference is represented by the fact that it uses (i) a novel routine for generating the initial population (line 5); (ii) a new crossover operator; (iii) a new mutation operator. Finally, the fittest test obtained at the end of the search is optimized by post-processing.

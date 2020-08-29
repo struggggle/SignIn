@@ -70,5 +70,7 @@ paper 35: Caiipa: Automated Large-scale Mobile App Testing through Contextual Fu
 
 paper 36: Using Frugal User Feedback with Closeness Analysis on Code to Improve IR-Based Traceability Recovery (ICPC'19)
 
+paper 37: A Guided Genetic Algorithm for Automated Crash Reproduction (ICSE'17)
+
 
 
