@@ -1,0 +1,18 @@
+Paper name: 
+Systematically Testing Background Services of Mobile Apps
+
+
+Research problem:
+How to systematically identify and automate background services in Android apps?
+
+
+Contributions:
+This paper motivates the need to proactively test app background services, and lays the necessary foundation – a whitebox testing framework for background services. 
+
+
+Approach overview:
+First, to test all services of an app, Snowdrop realizes the service-oriented approach that generates test inputs by first localizing all services. This is different from the ICC-oriented approach that simply identifies Intents coded in the app bytecode. 
+
+Second, for the completeness of test inputs generated, we aim to infer developer-specified fields in Intents, e.g., extras key-value pairs. Since these fields can syntactically take arbitrary values, challenges arise from selecting a value that has the appropriate semantics from the vast solution space. Snowdrop exploits the similarity in how developers name variables. Our heuristic extends text classification with feature vector from the natural language processing (NLP) community.
+
+Third, to exercise all code paths of each identified service, Snowdrop generates execution inputs that include return values of system APIs. We argue that the low complexity of typical app services suggests that the proven pathwise test data generation is feasible. Furthermore, since each hardware and system component can have a set of corresponding APIs, Snowdrop maintains finite-state models to ensure consistency across generated execution inputs.

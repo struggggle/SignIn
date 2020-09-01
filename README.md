@@ -72,5 +72,7 @@ paper 36: Using Frugal User Feedback with Closeness Analysis on Code to Improve 
 
 paper 37: A Guided Genetic Algorithm for Automated Crash Reproduction (ICSE'17)
 
+paper 38: Systematically Testing Background Services of Mobile Apps (ASE'17)
+
 
 
