@@ -74,5 +74,7 @@ paper 37: A Guided Genetic Algorithm for Automated Crash Reproduction (ICSE'17)
 
 paper 38: Systematically Testing Background Services of Mobile Apps (ASE'17)
 
+paper 39: Towards Model Checking Android Applications (TSE'18)
+
 
 

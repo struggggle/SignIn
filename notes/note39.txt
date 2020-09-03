@@ -1,0 +1,17 @@
+Paper name: 
+Towards Model Checking Android Applications
+
+
+Research problem:
+How to verify Android apps against security properties. 
+
+
+
+Contributions:
+we propose DROIDPF, a verification framework which employs the state- of-the-art software model checking techniques to Android apps. It enables JPF-based dynamic state-space exploration, by including an extensible mock-up Android OS that pro- vides the major OS functionalities.
+ 
+
+
+Approach overview:
+First, given a privilege property or privacy property, DROIDPF performs a static analysis (i.e., program slicing) to remove the program paths which are assured to never lead to property violation.
+Second, DROIDPF relies on JPF to model check the reduced apps. DROIDPF provides a mock-up of the Android OS so that JPF can dynamically execute the app. In addition, in order to systematically explore the state space, we need an environment which generates not only different scheduling but also possible valid event sequences. The former is solved by relying on JPF, which implements a backtrackable JVM that provides non-deterministic choices and control over thread scheduling. The latter (specific to the event-driven nature of Android apps) is solved by constructing driver programs which generates the relevant event sequences. On this step, we exclude the event sequences that are impossible to happen in reality.
