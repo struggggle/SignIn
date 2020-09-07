@@ -76,5 +76,7 @@ paper 38: Systematically Testing Background Services of Mobile Apps (ASE'17)
 
 paper 39: Towards Model Checking Android Applications (TSE'18)
 
+paper 40: Oracle-guided component-based program synthesis (ICSE'10)
+
 
 

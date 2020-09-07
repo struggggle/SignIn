@@ -1,0 +1,19 @@
+Paper name: 
+Oracle-Guided Component-Based Program Synthesis
+
+
+Research problem:
+How to automatic synthesis of loop-free programs? 
+
+
+Insight:
+The key idea of our algorithm is to query the I/O oracle on an input that can distinguish between non-equivalent programs that are consistent with the past interaction with the I/O oracle. 
+
+Contributions:
+We present an instantiation of the oracle-guided approach to synthesis of loop-free programs over a given set of components. This is enabled by a novel constraint-based technique that involves an interaction between SMT solvers and the I/O oracle. We also present an interesting optimization that leverages biased sampling.
+ 
+
+
+Approach overview:
+Our solution is based on encoding the space of all possible programs by a formula. Given a set of input-output pairs, we then constrain this formula further so that it encodes only those programs that work correctly on the given input-output pairs. By solving this constraint, we generate a candidate solution. If the candidate solution is not the desired program, we provide a way to generate a new input-output pair.
+
