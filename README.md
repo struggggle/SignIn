@@ -78,5 +78,9 @@ paper 39: Towards Model Checking Android Applications (TSE'18)
 
 paper 40: Oracle-guided component-based program synthesis (ICSE'10)
 
+paper 41: Translating Video Recordings of Mobile App Usages into Replayable Scenarios (ICSE'20)
+
+
+
 
 

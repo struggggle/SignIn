@@ -1,0 +1,22 @@
+Paper name: 
+Translating Video Recordings of Mobile App Usages into Replayable Scenarios
+
+
+Research problem:
+How to translate video recordings of Android app usages into replayable scenarios?
+
+
+
+Contributions:
+V2S, the first record-and-replay approach for Android that functions purely on screen-recordings of app usages. V2S adapts computer vision solutions for object detection, and image classification, to effectively recognize and classify user actions in the video frames of a screen recording.
+
+Insight:
+V2S adapts recent Deep Learning (DL) models for object detection and image classifcation to accurately detect and classify different types of user actions performed on the screen. 
+ 
+
+
+Approach overview:
+The approach is divided into three main phases: 
+(i) the Touch Detection phase, which identifies user touches in each frame of an input video; 
+(ii) the Action Classification phase that groups and classifies the detected touches into discrete user actions (i.e., tap, long-tap, and swipe);
+(iii) the Scenario Generation phase that exports and formats these actions into a replayable script.
