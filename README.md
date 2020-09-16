@@ -80,6 +80,8 @@ paper 40: Oracle-guided component-based program synthesis (ICSE'10)
 
 paper 41: Translating Video Recordings of Mobile App Usages into Replayable Scenarios (ICSE'20)
 
+paper 42: Revealing Injection Vulnerabilities by Leveraging Existing Tests (ICSE'20)
+
 
 
 

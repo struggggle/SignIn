@@ -17,6 +17,6 @@ V2S adapts recent Deep Learning (DL) models for object detection and image class
 
 Approach overview:
 The approach is divided into three main phases: 
-(i) the Touch Detection phase, which identifies user touches in each frame of an input video; 
-(ii) the Action Classification phase that groups and classifies the detected touches into discrete user actions (i.e., tap, long-tap, and swipe);
-(iii) the Scenario Generation phase that exports and formats these actions into a replayable script.
+(i) the Touch Detection phase, which identifies user touches in each frame of an input video; The goal of this phase is to accurately identify the locations where a user touched the device screen during a video recording. 
+(ii) the Action Classification phase that groups and classifies the detected touches into discrete user actions (i.e., tap, long-tap, and swipe);The classification of these actions involves two main parts: (i) a grouping algorithm that associates touches across subsequent frames as a discrete action; and (ii) action translation, which identifies the grouped touches as a single action type. The output of this step is a series of touch groups, each corresponding to an action type: (i) Tap, (ii) Long Tap, or (iii) Gesture (e.g., swipes, pinches, etc).
+(iii) the Scenario Generation phase that exports and formats these actions into a replayable script.V2S proceeds by generating commands using the Android Debug Bridge (adb) that replay the classified actions on a device. 
