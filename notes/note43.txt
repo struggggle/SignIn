@@ -1,0 +1,17 @@
+Paper name: 
+Unblind Your Apps: Predicting Natural-Language Labels for Mobile GUI Components by Deep Learning
+
+
+Research problem:
+How to detect injection vulnerabilities in applications?
+
+
+Insight:
+Our key idea is to use dynamic taint tracking before deployment to amplify developer-written tests to check for injection vulnerabilities.
+
+
+Approach overview:
+The approach is divided into three-step process to detect injection vulnerabilities in web applications. 
+(1) First, Rivulet uses dynamic taint tracking while running each test to observe data flows from “sources,” untrusted system inputs controlled by a potentially malicious actor, to “sinks,” sensitive parts of an application that may be vulnerable to injection attacks. These source-sink flows do not necessarily represent vulnerabilities: it is possible that a sanitizer function correctly protects the application. Hence, when a source-sink flow is observed, Rivulet generates malicious payloads based on contextual information of the sink method. 
+(2) Then, tests are re-executed and those untrusted source values are replaced with generated payloads, probing for weak or missing sanitizers. 
+(3) Lastly, specialized logic based on the type of vulnerability, e.g., XSS, is used as an oracle to determine whether a re-execution demonstrates a successful attack, thereby transforming a functional test into a security test.

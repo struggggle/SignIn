@@ -82,6 +82,18 @@ paper 41: Translating Video Recordings of Mobile App Usages into Replayable Scen
 
 paper 42: Revealing Injection Vulnerabilities by Leveraging Existing Tests (ICSE'20)
 
+-------performance papers
+
+paper 43: Identifying Software Performance Changes across Variants and Versions (ASE'2020)
+
+paper 44: CP-Detector: Using Configuration-Related Performance Properties to Expose Performance Bugs (ASE'2020)
+
+paper 45: Mastering Uncertainty in Performance Estimations of Configurable Software Systems (ASE'2020)
+
+paper 45: Understanding Performance Concerns in the API Documentation of Data Science Libraries (ASE'2020)
+
+paper 45: PerfCI: A Toolchain for Automated Performance Testing during Continuous Integration of Python Projects (ASE'2020)
+
 
 
 
