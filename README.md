@@ -94,6 +94,21 @@ paper 45: Understanding Performance Concerns in the API Documentation of Data Sc
 
 paper 45: PerfCI: A Toolchain for Automated Performance Testing during Continuous Integration of Python Projects (ASE'2020)
 
+paper 52: PerfLearner: Learning from Bug Reports to Understand and Generate Performance Test Frames (ASE'18)
+
+---------android papers
+paper 46: Demystifying Diehard Android Apps(ASE'2020)
+
+paper 47: UI Obfuscation and Its Effects on Automated UI Analysis for Android Apps(ASE'2020)
+
+paper 48: ER Catcher: A Static Analysis Framework for Accurate and Scalable Event-Race Detection in Android(ASE'2020)
+
+paper 49: Automated Third-Party Library Detection for Android Applications: Are We There Yet?(ASE'2020)
+
+paper 50: Test Automation in Open-Source Android Apps: A Large-Scale Empirical Study(ASE'2020)
+
+paper 51: A Framework for Automated Test Mocking of Mobile Apps(ASE'2020)
+
 
 
 
