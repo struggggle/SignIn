@@ -109,6 +109,8 @@ paper 50: Test Automation in Open-Source Android Apps: A Large-Scale Empirical S
 
 paper 51: A Framework for Automated Test Mocking of Mobile Apps(ASE'2020)
 
+paper 52: Discovering UI Display Issues with Visual Understanding(ASE'20)
+
 
 
 
