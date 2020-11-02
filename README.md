@@ -82,6 +82,8 @@ paper 41: Translating Video Recordings of Mobile App Usages into Replayable Scen
 
 paper 42: Revealing Injection Vulnerabilities by Leveraging Existing Tests (ICSE'20)
 
+paper 54: Debugging Inputs （ICSE"20）
+
 -------performance papers
 
 paper 43: Identifying Software Performance Changes across Variants and Versions (ASE'2020)
@@ -109,7 +111,7 @@ paper 50: Test Automation in Open-Source Android Apps: A Large-Scale Empirical S
 
 paper 51: A Framework for Automated Test Mocking of Mobile Apps(ASE'2020)
 
-paper 52: Discovering UI Display Issues with Visual Understanding(ASE'20)
+paper 53: Discovering UI Display Issues with Visual Understanding(ASE'20)
 
 
 
